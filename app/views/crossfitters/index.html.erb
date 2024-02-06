@@ -1,0 +1,7 @@
+<h1>Crossfitters</h1>
+
+<% @crossfitters.each do |crossfitter| %>
+  <p><%= link_to crossfitter.name, "/crossfitters/#{crossfitter.id}" %> - <%= link_to "Update Crossfitter", "/crossfitters/#{crossfitter.id}/edit" %></p>
+  <p><%= crossfitter.name %> Oly Lifts: <%= crossfitter.oly_lift %></p>
+  <p><%= crossfitter.name %>'s age is <%= crossfitter.age %></p>
+<% end %>

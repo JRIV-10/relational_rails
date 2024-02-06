@@ -1,4 +1,10 @@
-<%= @gym.name %>
-<p>Gym ID: <%= @gym.id %></p>
-<p>Gym Is Open 24/7: <%= @gym.always_open %></p>
-<p>Gym Has <%= @gym.num_of_platforms %> Platforms</p> 
+<a href="/gyms/<%= @gym.id %>/crossfitters">Crossfitters at this Gym</a><br/>
+<a href="/gyms/<%= @gym.id %>/edit"%>Update Gym</a>
+
+<div>
+    <%= @gym.name %> - <!---<%= link_to "Delete Gym", "/gyms", method: :delete %> --->
+    <p>Gym ID: <%= @gym.id %></p>
+    <p><%=@gym.name%> Is Open 24/7: <%= @gym.always_open %></p>
+    <p><%=@gym.name%> has <%= @gym.num_of_platforms %> Platforms</p> 
+    <p><%=@gym.name%> has <%= @gym.counted %> Crossfitters</p> 
+</div>

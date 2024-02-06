@@ -1,0 +1,9 @@
+<%= form_with url: "/gyms/#{@gym.id}", method: :patch, local: true do |form| %>
+  <%= form.label :name%>
+  <%= form.text_field :name%><br/>
+  <%= form.label :always_open %>
+  <%= form.check_box :always_open %><br/>
+  <%= form.label :num_of_platforms%>
+  <%= form.text_field :num_of_platforms%><br/>
+  <%= form.submit "Update Gym"%>
+<% end %>

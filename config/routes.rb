@@ -8,5 +8,19 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   # root "posts#index"
   get "/gyms", to: "gyms#index"
+  get "/gyms/new", to: "gyms#new"
+  post "/gyms", to: "gyms#create"
+  patch "/gyms/:id", to: "gyms#update"
+  get "/gyms/:id/edit", to: "gyms#edit"
   get "/gyms/:id", to: "gyms#show"
+  delete "/gyms/:id", to: "gyms#destroy"
+  
+  get "/crossfitters", to: "crossfitters#index"
+  get "crossfitters/:id/edit", to: "crossfitters#edit"
+  patch "/crossfitters/:id", to: "crossfitters#update"
+  get "/crossfitters/:id", to: "crossfitters#show"
+  
+  get "/gyms/:gym_id/crossfitters/new", to: "gym_crossfitters#new"
+  post "/gyms/:gym_id/crossfitters", to: "gym_crossfitters#create"
+  get "/gyms/:gym_id/crossfitters", to: "gym_crossfitters#index"
 end

@@ -15,14 +15,13 @@ ActiveRecord::Schema[7.1].define(version: 2024_01_30_230958) do
   enable_extension "plpgsql"
 
   create_table "crossfitters", force: :cascade do |t|
-    t.bigint "gyms_id", null: false
-    t.integer "mem_id"
+    t.bigint "gym_id", null: false
     t.string "name"
     t.boolean "oly_lift"
     t.integer "age"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["gyms_id"], name: "index_crossfitters_on_gyms_id"
+    t.index ["gym_id"], name: "index_crossfitters_on_gym_id"
   end
 
   create_table "gyms", force: :cascade do |t|
@@ -33,5 +32,5 @@ ActiveRecord::Schema[7.1].define(version: 2024_01_30_230958) do
     t.datetime "updated_at", null: false
   end
 
-  add_foreign_key "crossfitters", "gyms", column: "gyms_id"
+  add_foreign_key "crossfitters", "gyms"
 end

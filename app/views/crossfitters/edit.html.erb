@@ -1,0 +1,9 @@
+<%= form_with url: "/crossfitters/#{@crossfitter.id}", method: :patch, local: true do |form| %>
+  <%= form.label :name%>
+  <%= form.text_field :name%><br/>
+  <%= form.label :oly_lift %>
+  <%= form.check_box :oly_lift %><br/>
+  <%= form.label :age%>
+  <%= form.text_field :age%><br/>
+  <%= form.submit "Update Crossfitter"%>
+<% end %>

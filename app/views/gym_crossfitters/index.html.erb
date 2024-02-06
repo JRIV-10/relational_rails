@@ -1,0 +1,9 @@
+<h1>Crossfitters at this gym</h1>
+
+<% @crossfitters.each do |crossfitter|%>
+    <p><%= crossfitter.name %> - <%= link_to "Update Crossfitter", "/crossfitters/#{crossfitter.id}/edit" %></p>
+    <p><%= crossfitter.oly_lift %></p>
+    <p><%= crossfitter.age %></p>
+<% end %>
+<%= link_to 'Create a Crossfitter for this gym', "/gyms/#{@gym.id}/crossfitters/new" %>
+<%= link_to "Sort Crossfitters Alphabetically", :sort => "name" %>

@@ -1,0 +1,8 @@
+<div>
+    <%= @crossfitter.name %>
+    <p>Crossfitter ID: <%= @crossfitter.id %></p>
+    <p>Crossfitter Name: <%= @crossfitter.name %></p>
+    <p>Crossfitter Oly Lifts: <%= @crossfitter.oly_lift %></p> 
+    <p>Crossfitter Age: <%= @crossfitter.age %></p> 
+</div>
+<%=link_to 'Update Crossfitter', "/crossfitters/#{@crossfitter.id}/edit" %>
